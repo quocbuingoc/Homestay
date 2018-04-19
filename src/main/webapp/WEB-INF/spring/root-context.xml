@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/security
+                           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<security:http auto-config="true">
+		<security:access-denied-handler
+			error-page="/403" />
+		<security:intercept-url pattern="/"
+			access="ROLE_HOST,ROLE_GUEST,ROLE_ADMIN" />
+		<security:intercept-url pattern="/host/{username}"
+			access="ROLE_HOST" />
+		<security:intercept-url pattern="/guest/{username}"
+			access="ROLE_GUEST" />
+		<security:intercept-url pattern="/host/homestay/{username}"
+			access="ROLE_HOST" />
+		<security:intercept-url pattern="/host/room/{username}"
+			access="ROLE_HOST" />
+		<!-- <security:intercept-url pattern="/booking/{homestayId}*"
+			access="ROLE_GUEST" /> -->
+		<security:intercept-url pattern="/admin"
+			access="ROLE_ADMIN" />
+		<security:form-login login-page="/login"
+			default-target-url="/admin" authentication-failure-url="/fail2login" />
+		<security:form-login login-page="/login"
+			default-target-url="/" authentication-failure-url="/fail2login" />
+		<security:form-login login-page="/login"
+			default-target-url="/host/{username}" authentication-failure-url="/fail2login" />
+		<security:form-login login-page="/login"
+			default-target-url="/guest/{username}" authentication-failure-url="/fail2login" />
+		<security:form-login login-page="/login"
+			default-target-url="/host/homestay/{username}"
+			authentication-failure-url="/fail2login" />
+		<security:form-login login-page="/login"
+			default-target-url="/host/room/{username}"
+			authentication-failure-url="/fail2login" />
+		<security:logout logout-success-url="/logout" />
+	</security:http>
+
+	<!-- Password Hashing Bean -->
+	<bean id="passwordEncoder"
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<constructor-arg name="strength" value="6" />
+	</bean>
+
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<!-- <security:user-service> <security:user name="quoc" password="quoc" 
+				authorities="ROLE_USER" /> -->
+			<security:jdbc-user-service
+				data-source-ref="dataSource"
+				users-by-username-query="select user_name, password, enabled, role_id from accounts where user_name = ?"
+				authorities-by-username-query="select a.user_name, r.authority from accounts a, roles r where r.role_id = a.role_id 
+				and a.user_name = ?" />
+			<security:password-encoder ref="passwordEncoder" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<property name="url"
+			value="jdbc:sqlserver://localhost:1433;databaseName=HomestayManagement" />
+		<property name="username" value="sa" />
+		<property name="password" value="123456" />
+	</bean>
+</beans>
