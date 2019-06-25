@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Booking Homestay Network</title>
+<title>Homestay Social Network</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

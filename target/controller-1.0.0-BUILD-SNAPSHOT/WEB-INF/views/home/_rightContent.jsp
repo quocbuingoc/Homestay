@@ -58,13 +58,13 @@
 			<img class="img-responsive"
 				src="<c:url value="/resources/images/advertise/advertise-here.png"/>">
 		</div>
-		<div class="well">The new Bootstrap 3 is a smaller build. The
+		<!-- <div class="well">The new Bootstrap 3 is a smaller build. The
 			separate Bootstrap base and responsive.css files have now been merged
 			into one. There is no more fixed grid, only fluid..</div>
 		<div class="well">Well, that's it for now Jim.</div>
 		<div class="well">A big design trend for 2013 is "flat" design.
 			Gone are the days of excessive gradients and shadows. Designers are
 			producing cleaner flat designs, and Bootstrap 3 takes advantage of
-			this minimalist trend. Aliquam in felis sit amet augue.</div>
+			this minimalist trend. Aliquam in felis sit amet augue.</div> -->
 	</div>
 </div>

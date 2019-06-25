@@ -21,7 +21,7 @@
 	<div class="container">
 		<br> <br> <br>
 		<center>
-			<h1 style="color: white">Booking Homestay Network</h1>
+			<h1 style="color: white">Homestay Social Network</h1>
 		</center>
 
 
@@ -77,9 +77,9 @@
 								class="radio-inline"><form:radiobutton
 									path="roles.roleId" name="optradio" value="1" equired="true" />Host</label>
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<input type="checkbox" required> Agree with account?
-						</div>
+						</div> -->
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary btn-block">Create</button>
 						</div>
@@ -90,7 +90,7 @@
 
 			</div>
 		</div>
-		<div class="row" id="copyright">Copyright by Tuannk</div>
+		<div class="row" id="copyright">Copyright by QuocBuiNgoc</div>
 
 
 

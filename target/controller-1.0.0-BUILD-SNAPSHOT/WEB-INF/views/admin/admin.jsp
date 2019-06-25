@@ -204,7 +204,7 @@
 	<footer class="pull-left footer">
 	<p class="col-md-12">
 	<hr class="divider">
-	Copyright &COPY; 2018 Quocbn</a>
+	Copyright &COPY; 2018 QuocBuiNgoc</a>
 	</p>
 	</footer>
 	</div>

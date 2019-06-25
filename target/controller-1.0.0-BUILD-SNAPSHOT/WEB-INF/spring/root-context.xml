@@ -7,7 +7,6 @@
                            http://www.springframework.org/schema/security
                            http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
-
 	<security:http auto-config="true">
 		<security:access-denied-handler
 			error-page="/403" />
@@ -21,8 +20,8 @@
 			access="ROLE_HOST" />
 		<security:intercept-url pattern="/host/room/{username}"
 			access="ROLE_HOST" />
-		<security:intercept-url pattern="/booking/{homestayId}*"
-			access="ROLE_GUEST" />
+		<!-- <security:intercept-url pattern="/booking/{homestayId}*"
+			access="ROLE_GUEST" /> -->
 		<security:intercept-url pattern="/admin"
 			access="ROLE_ADMIN" />
 		<security:form-login login-page="/login"
@@ -50,7 +49,7 @@
 
 	<security:authentication-manager>
 		<security:authentication-provider>
-			<!-- <security:user-service> <security:user name="tuan" password="tuan" 
+			<!-- <security:user-service> <security:user name="quoc" password="quoc" 
 				authorities="ROLE_USER" /> -->
 			<security:jdbc-user-service
 				data-source-ref="dataSource"

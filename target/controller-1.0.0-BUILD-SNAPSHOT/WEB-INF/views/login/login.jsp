@@ -22,7 +22,7 @@
 		<div class="container">
 			<br> <br> <br>
 			<center>
-				<h1 style="color: white">Booking Homestay Network</h1>
+				<h1 style="color: white">Homestay Social Network</h1>
 			</center>
 			<div class="row">
 				<div
@@ -69,7 +69,7 @@
 
 				</div>
 			</div>
-			<div class="row" id="copyright">Copyright by Tuannk</div>
+			<div class="row" id="copyright">Copyright by QuocBuiNgoc</div>
 		</div>
 	</div>
 </body>
