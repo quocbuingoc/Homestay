@@ -70,6 +70,4 @@ public class HomestayImage {
 	public void setSortOrder(String sortOrder) {
 		this.sortOrder = sortOrder;
 	}
-	
-	
 }

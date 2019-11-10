@@ -52,6 +52,4 @@ public class HomestayType {
 	public void setTypeDescription(String typeDescription) {
 		this.typeDescription = typeDescription;
 	}
-	
-	
 }

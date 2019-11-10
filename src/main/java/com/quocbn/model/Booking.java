@@ -122,7 +122,4 @@ public class Booking {
 	public void setTotalAmount(double totalAmount) {
 		this.totalAmount = totalAmount;
 	}
-	
-	
-	
 }
