@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.quocbn.model;
 
 import javax.persistence.Column;
@@ -148,4 +147,3 @@ public class HomestayImage {
 		this.sortOrder = sortOrder;
 	}
 }
->>>>>>> 0e0128af52190d13e822f9f8ca4c67e6fe64b065

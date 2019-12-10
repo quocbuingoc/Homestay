@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-<<<<<<< HEAD
     <wb-module deploy-name="HomestayManagement-1.0.0-BUILD-SNAPSHOT">
-=======
-    <wb-module deploy-name="controller-1.0.0-BUILD-SNAPSHOT">
->>>>>>> 0e0128af52190d13e822f9f8ca4c67e6fe64b065
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
         <property name="java-output-path" value="/HomestayManagement/bin"/>
-<<<<<<< HEAD
         <property name="context-root" value="HomestayManagement"/>
-=======
-        <property name="context-root" value="controller"/>
->>>>>>> 0e0128af52190d13e822f9f8ca4c67e6fe64b065
     </wb-module>
 </project-modules>

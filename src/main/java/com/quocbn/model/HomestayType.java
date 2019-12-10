@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.quocbn.model;
 
 import java.util.Set;
@@ -112,4 +111,3 @@ public class HomestayType {
 		this.typeDescription = typeDescription;
 	}
 }
->>>>>>> 0e0128af52190d13e822f9f8ca4c67e6fe64b065
