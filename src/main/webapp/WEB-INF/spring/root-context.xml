@@ -53,19 +53,20 @@
 				authorities="ROLE_USER" /> -->
 			<security:jdbc-user-service
 				data-source-ref="dataSource"
-				users-by-username-query="select user_name, password, enabled, role_id from accounts where user_name = ?"
+				users-by-username-query="select user_name, password from accounts where user_name = ?"/>
+				<!-- users-by-username-query="select user_name, password, enabled, role_id from accounts where user_name = ?"
 				authorities-by-username-query="select a.user_name, r.authority from accounts a, roles r where r.role_id = a.role_id 
-				and a.user_name = ?" />
+				and a.user_name = ?" /> -->
 			<security:password-encoder ref="passwordEncoder" />
 		</security:authentication-provider>
 	</security:authentication-manager>
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:sqlserver://localhost:1433;databaseName=HomestayManagement" />
-		<property name="username" value="sa" />
-		<property name="password" value="123456" />
+			value="jdbc:mysql://localhost:3306/HomestayManagement" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
 	</bean>
 </beans>

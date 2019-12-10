@@ -179,7 +179,4 @@ public class Account {
 	public void setRoles(Role roles) {
 		this.roles = roles;
 	}
-	
-
-	
 }

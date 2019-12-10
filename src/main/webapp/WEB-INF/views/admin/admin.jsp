@@ -178,16 +178,14 @@
 											<td>${account.userName}</td>
 											<td>${account.fullName}</td>
 											<td>${account.emailAddress}</td>
-											<td>
-											<c:choose>
-												<c:when test="${account.enabled == 'true' }">
-													<button class="btn btn-primary">Active</button>
-												</c:when>
-												<c:otherwise>
-													<button class="btn btn-danger">Deactive</button>
-												</c:otherwise>
-											</c:choose>
-											</td>
+											<td><c:choose>
+													<c:when test="${account.enabled == 'true' }">
+														<button class="btn btn-primary">Active</button>
+													</c:when>
+													<c:otherwise>
+														<button class="btn btn-danger">Deactive</button>
+													</c:otherwise>
+												</c:choose></td>
 										</tr>
 									</c:forEach>
 								</tbody>
@@ -202,10 +200,10 @@
 		</div>
 	</div>
 	<footer class="pull-left footer">
-	<p class="col-md-12">
-	<hr class="divider">
-	Copyright &COPY; 2018 QuocBuiNgoc</a>
-	</p>
+		<p class="col-md-12">
+		<hr class="divider">
+		Copyright &COPY; 2018 QuocBuiNgoc</a>
+		</p>
 	</footer>
 	</div>
 </body>
